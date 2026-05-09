@@ -1,4 +1,4 @@
-<manifest package="com.pulsesphere">
+<manifest>
   <application
       android:allowBackup="true"
       android:label="PulseSphere"
