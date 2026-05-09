@@ -15,6 +15,8 @@ dependencies {
   implementation(libs.spring.boot.elasticsearch)
   implementation(libs.spring.boot.kafka)
   implementation(libs.spring.boot.actuator)
+
+
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

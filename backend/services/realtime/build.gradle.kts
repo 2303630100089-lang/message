@@ -19,6 +19,8 @@ dependencies {
   implementation(libs.grpc.protobuf)
   implementation(libs.grpc.stub)
   implementation(libs.spring.boot.actuator)
+
+
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

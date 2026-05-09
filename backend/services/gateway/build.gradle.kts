@@ -15,8 +15,10 @@ dependencies {
   implementation(libs.spring.boot.security)
   implementation(libs.spring.boot.oauth2.resource)
   implementation(libs.spring.boot.redis)
-  implementation(libs.spring.boot.actuator)
   implementation(libs.spring.boot.validation)
+  implementation(libs.spring.boot.actuator)
+
+
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

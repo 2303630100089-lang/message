@@ -17,6 +17,8 @@ dependencies {
   implementation(libs.spring.boot.kafka)
   implementation(libs.spring.boot.validation)
   implementation(libs.spring.boot.actuator)
+
+
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 

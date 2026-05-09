@@ -1,7 +1,7 @@
 [versions]
-spring-boot = "3.3.5"
+spring-boot = "4.0.6"
 spring-dep = "1.1.6"
-grpc = "1.68.0"
+grpc = "1.75.0"
 
 [libraries]
 spring-boot-webflux = { module = "org.springframework.boot:spring-boot-starter-webflux", version.ref = "spring-boot" }
@@ -13,7 +13,7 @@ spring-boot-mongodb = { module = "org.springframework.boot:spring-boot-starter-d
 spring-boot-redis = { module = "org.springframework.boot:spring-boot-starter-data-redis-reactive", version.ref = "spring-boot" }
 spring-boot-websocket = { module = "org.springframework.boot:spring-boot-starter-websocket", version.ref = "spring-boot" }
 spring-boot-graphql = { module = "org.springframework.boot:spring-boot-starter-graphql", version.ref = "spring-boot" }
-spring-boot-kafka = { module = "org.springframework.kafka:spring-kafka", version.ref = "spring-boot" }
+spring-boot-kafka = { module = "org.springframework.boot:spring-boot-starter-kafka", version.ref = "spring-boot" }
 spring-boot-amqp = { module = "org.springframework.boot:spring-boot-starter-amqp", version.ref = "spring-boot" }
 spring-boot-elasticsearch = { module = "org.springframework.boot:spring-boot-starter-data-elasticsearch", version.ref = "spring-boot" }
 reactor-kotlin = { module = "io.projectreactor.kotlin:reactor-kotlin-extensions", version = "1.2.2" }
