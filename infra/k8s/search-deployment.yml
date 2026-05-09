@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulsesphere-search
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pulsesphere-search
+  template:
+    metadata:
+      labels:
+        app: pulsesphere-search
+    spec:
+      containers:
+        - name: search
+          image: pulsesphere/search:latest
+          ports:
+            - containerPort: 8085
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pulsesphere-search
+spec:
+  selector:
+    app: pulsesphere-search
+  ports:
+    - port: 80
+      targetPort: 8085

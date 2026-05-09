@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulsesphere-realtime
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pulsesphere-realtime
+  template:
+    metadata:
+      labels:
+        app: pulsesphere-realtime
+    spec:
+      containers:
+        - name: realtime
+          image: pulsesphere/realtime:latest
+          ports:
+            - containerPort: 8083
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pulsesphere-realtime
+spec:
+  selector:
+    app: pulsesphere-realtime
+  ports:
+    - port: 80
+      targetPort: 8083

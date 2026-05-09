@@ -1,0 +1,11 @@
+flowchart TB
+  onboarding[Onboarding]
+  login[Login]
+  home[Home Feed]
+  chats[Chats]
+  chatview[Chat View]
+  profile[Profile]
+  settings[Settings]
+  onboarding --> login --> home
+  home --> chats --> chatview
+  home --> profile --> settings
