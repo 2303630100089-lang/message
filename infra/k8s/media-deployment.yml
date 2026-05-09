@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulsesphere-media
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pulsesphere-media
+  template:
+    metadata:
+      labels:
+        app: pulsesphere-media
+    spec:
+      containers:
+        - name: media
+          image: pulsesphere/media:latest
+          ports:
+            - containerPort: 8084
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pulsesphere-media
+spec:
+  selector:
+    app: pulsesphere-media
+  ports:
+    - port: 80
+      targetPort: 8084

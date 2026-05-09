@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pulsesphere-media
+server:
+  port: 8084

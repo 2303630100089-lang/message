@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pulsesphere-auth
+server:
+  port: 8081

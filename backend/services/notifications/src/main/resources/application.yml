@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pulsesphere-notifications
+server:
+  port: 8086

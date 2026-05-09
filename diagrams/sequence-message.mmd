@@ -1,0 +1,12 @@
+sequenceDiagram
+  participant C as Client
+  participant G as Gateway
+  participant M as Messaging
+  participant K as Kafka
+  participant R as Realtime
+
+  C->>G: POST /chats/{id}/messages
+  G->>M: persist message
+  M->>K: publish message event
+  K->>R: consume event
+  R-->>C: push via WebSocket

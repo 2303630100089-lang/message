@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: pulsesphere-notifications
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: pulsesphere-notifications
+  template:
+    metadata:
+      labels:
+        app: pulsesphere-notifications
+    spec:
+      containers:
+        - name: notifications
+          image: pulsesphere/notifications:latest
+          ports:
+            - containerPort: 8086
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: pulsesphere-notifications
+spec:
+  selector:
+    app: pulsesphere-notifications
+  ports:
+    - port: 80
+      targetPort: 8086
