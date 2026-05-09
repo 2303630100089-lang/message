@@ -1,0 +1,11 @@
+classDiagram
+  class AuthService
+  class MessagingService
+  class RealtimeService
+  class MediaService
+  class SearchService
+  class NotificationService
+  AuthService --> MessagingService : issues tokens
+  MessagingService --> RealtimeService : emits events
+  MediaService --> MessagingService : links assets
+  SearchService --> MessagingService : indexes content

@@ -1,0 +1,8 @@
+sequenceDiagram
+  participant C as Client
+  participant G as Gateway
+  participant A as Auth Service
+  C->>G: POST /auth/login
+  G->>A: validate credentials
+  A-->>G: tokens + session
+  G-->>C: JWT + refresh

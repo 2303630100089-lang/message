@@ -1,0 +1,16 @@
+flowchart LR
+  subgraph Region A
+    gatewayA[Gateway]
+    servicesA[Services]
+  end
+  subgraph Region B
+    gatewayB[Gateway]
+    servicesB[Services]
+  end
+  cdn[(CDN)]
+  dns[(Global DNS)]
+  dns --> gatewayA
+  dns --> gatewayB
+  servicesA <--> servicesB
+  servicesA --> cdn
+  servicesB --> cdn

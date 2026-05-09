@@ -1,0 +1,5 @@
+spring:
+  application:
+    name: pulsesphere-messaging
+server:
+  port: 8082

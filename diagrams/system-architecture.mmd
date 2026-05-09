@@ -1,0 +1,30 @@
+flowchart LR
+  client[Android Client]
+  gateway[API Gateway]
+  auth[Auth Service]
+  messaging[Messaging Service]
+  realtime[Realtime Service]
+  media[Media Service]
+  search[Search Service]
+  notify[Notifications Service]
+  mongo[(MongoDB)]
+  redis[(Redis)]
+  kafka[(Kafka)]
+  es[(Elasticsearch)]
+  cdn[(CDN)]
+
+  client --> gateway
+  gateway --> auth
+  gateway --> messaging
+  gateway --> media
+  gateway --> search
+  gateway --> notify
+  client <---> realtime
+
+  messaging --> mongo
+  auth --> mongo
+  media --> mongo
+  realtime --> redis
+  messaging --> kafka
+  search --> es
+  media --> cdn
