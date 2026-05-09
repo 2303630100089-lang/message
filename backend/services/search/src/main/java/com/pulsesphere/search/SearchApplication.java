@@ -16,7 +16,7 @@ public class SearchApplication {
   static class SearchController {
     @GetMapping("/search")
     public String search(@RequestParam String q) {
-      return "searching: " + q;
+      return "search accepted";
     }
   }
 }

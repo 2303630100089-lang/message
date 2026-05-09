@@ -16,7 +16,7 @@ public class MessagingApplication {
   static class MessagingController {
     @GetMapping("/chats/{chatId}/messages")
     public String messages(@PathVariable String chatId) {
-      return "messages for " + chatId;
+      return "message stream ready";
     }
   }
 }
